@@ -1,0 +1,91 @@
+/nfsd/opt/anaconda3/tensorflow/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+-----------build encoder: deeplab pre-trained-----------
+after start block: (4, 81, 81, 64)
+after block1: (4, 81, 81, 256)
+after block2: (4, 41, 41, 512)
+after block3: (4, 41, 41, 1024)
+after block4: (4, 41, 41, 2048)
+-----------build decoder-----------
+after aspp block: (4, 41, 41, 21)
+2019-04-30 18:43:22.621827: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-04-30 18:43:24.272119: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:63:00.0
+totalMemory: 10.91GiB freeMemory: 10.75GiB
+2019-04-30 18:43:24.272157: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-04-30 18:43:24.758107: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-30 18:43:24.758196: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-04-30 18:43:24.758218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-04-30 18:43:24.762391: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10400 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:63:00.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from checkpoints/1_to_19/model.ckpt-20000
+INFO:tensorflow:Restoring parameters from checkpoints/1_to_19/model.ckpt-20000
+INFO:root:-----------Step 20000:-------------
+INFO:root: Standard_loss : 3.389521837234497
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 3.389521837234497
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19     20
+INFO:root: class IoU :  92.54% 85.33% 37.00% 86.16% 61.95% 77.38% 93.28% 81.61% 89.21% 32.37% 80.72% 56.17% 81.59% 81.09% 77.15% 82.80% 51.15% 81.68% 47.27% 84.99%  0.00%
+INFO:root: class acc :  96.68% 94.82% 81.69% 92.61% 85.80% 88.17% 97.12% 92.41% 94.15% 48.51% 89.33% 64.45% 90.73% 90.71% 90.56% 88.90% 65.32% 86.16% 55.43% 92.79%  0.00%
+INFO:root: mean pix acc : 93.20%
+INFO:root: mIoU : 69.59%
+INFO:root: mean_class_acc : 80.30%
+INFO:root: mIoU_nobackground : 68.44%
+INFO:root: mean_pixel_acc_no_background : 83.65%
+INFO:root: mIoU_new_classes : 0.00%
+INFO:root: Validation_loss : 0.28010687232017517
+INFO:root: accuracy : 93.20%
+INFO:root: Percentage of pixels not background : 25.83%
+INFO:root: Percentage of pixels not background (GT) : 26.68%
+INFO:root:-----------Step 20100:-------------
+INFO:root: Standard_loss : 0.7946445941925049
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 0.7946445941925049
+INFO:root:-----------Step 20200:-------------
+INFO:root: Standard_loss : 0.3681267201900482
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 0.3681267201900482
+INFO:root:-----------Step 20300:-------------
+INFO:root: Standard_loss : 0.3767145574092865
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 0.3767145574092865
+INFO:root:-----------Step 20400:-------------
+INFO:root: Standard_loss : 0.27694299817085266
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 0.27694299817085266
+INFO:root:-----------Step 20500:-------------
+INFO:root: Standard_loss : 0.2427006959915161
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 0.2427006959915161
+INFO:root:-----------Step 20600:-------------
+INFO:root: Standard_loss : 0.31950291991233826
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 0.31950291991233826
+INFO:root:-----------Step 20700:-------------
+INFO:root: Standard_loss : 0.2252030074596405
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 0.2252030074596405
+INFO:root:-----------Step 20800:-------------
+INFO:root: Standard_loss : 0.1790551096200943
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 0.1790551096200943
+INFO:root:-----------Step 20900:-------------
+INFO:root: Standard_loss : 0.576404333114624
+INFO:root: Distillation_loss : 0 [empty list returned]
+INFO:root: Final_loss : 0.576404333114624
+INFO:root:-----------Step 21000:-------------
+INFO:root: Final loss: 0.24543863534927368
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19     20
+INFO:root: class IoU :  90.22% 80.75% 33.27% 83.12% 53.70% 68.17% 84.60% 77.99% 83.17% 32.07% 73.35% 52.58% 76.60% 72.70% 68.77% 79.77% 43.80% 76.49% 46.54% 68.37% 20.08%
+INFO:root: class acc :  94.72% 83.89% 66.93% 90.18% 63.91% 80.19% 86.57% 81.56% 93.64% 46.05% 80.86% 57.44% 87.80% 90.38% 72.44% 87.76% 48.49% 81.06% 56.15% 71.79% 84.34%
+INFO:root: mean pix acc : 90.71%
+INFO:root: mIoU : 65.05%
+INFO:root: mean_class_acc : 76.48%
+INFO:root: mIoU_nobackground : 63.79%
+INFO:root: mean_pixel_acc_no_background : 79.68%
+INFO:root: mIoU_new_classes : 20.08%
+INFO:root: Validation_loss : 0.2917511463165283
+INFO:root: accuracy : 90.71%
+INFO:root: Percentage of pixels not background : 26.90%
+INFO:root: Percentage of pixels not background (GT) : 26.68%
+INFO:root:Model saved in file: checkpoints/1_to_19_20_20_nodistill_std_all/model.ckpt-21000

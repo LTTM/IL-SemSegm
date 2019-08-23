@@ -1,0 +1,717 @@
+/nfsd/opt/anaconda3/tensorflow/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+-----------build encoder: deeplab pre-trained-----------
+after start block: (4, 81, 81, 64)
+after block1: (4, 81, 81, 256)
+after block2: (4, 41, 41, 512)
+after block3: (4, 41, 41, 1024)
+after block4: (4, 41, 41, 2048)
+-----------build decoder-----------
+after aspp block: (4, 41, 41, 21)
+2019-04-30 15:36:53.687504: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-04-30 15:36:58.505947: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:63:00.0
+totalMemory: 10.91GiB freeMemory: 10.75GiB
+2019-04-30 15:36:58.506003: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-04-30 15:36:58.870595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-30 15:36:58.870646: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-04-30 15:36:58.870653: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-04-30 15:36:58.870982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10400 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:63:00.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../../../pretrained/deeplab_resnet_init.ckpt
+INFO:tensorflow:Restoring parameters from ../../../pretrained/deeplab_resnet_init.ckpt
+INFO:root:-----------Step 0:-------------
+INFO:root: Standard_loss=Final_loss : 3.8328325748443604
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :   3.59%  0.11%  1.19%  0.22%  0.38%  0.87%  7.09%  0.16%  3.24%  0.11%  0.61%  1.82%  1.07%  1.86%  0.19%  0.66%  0.13%  0.27%  0.59%  0.04%
+INFO:root: class acc :   3.63%  0.87%  7.85%  3.27%  4.44%  5.57% 40.41%  0.36% 12.33%  1.18%  1.02% 23.17%  1.60%  6.67%  0.97%  1.20%  0.56%  1.12%  1.85%  0.08%
+INFO:root: mean pix acc : 4.38%
+INFO:root: mIoU : 1.21%
+INFO:root: mean_class_acc : 5.91%
+INFO:root: mIoU_nobackground : 1.08%
+INFO:root: mean_pixel_acc_no_background : 6.43%
+INFO:root: Validation_loss : 3.9247682094573975
+INFO:root: accuracy : 4.38%
+INFO:root: Percentage of pixels not background : 96.57%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:-----------Step 100:-------------
+INFO:root: Standard_loss=Final_loss : 0.24440710246562958
+INFO:root:-----------Step 200:-------------
+INFO:root: Standard_loss=Final_loss : 0.2135031521320343
+INFO:root:-----------Step 300:-------------
+INFO:root: Standard_loss=Final_loss : 0.7195391654968262
+INFO:root:-----------Step 400:-------------
+INFO:root: Standard_loss=Final_loss : 0.19097387790679932
+INFO:root:-----------Step 500:-------------
+INFO:root: Standard_loss=Final_loss : 0.761839747428894
+INFO:root:-----------Step 600:-------------
+INFO:root: Standard_loss=Final_loss : 0.47744905948638916
+INFO:root:-----------Step 700:-------------
+INFO:root: Standard_loss=Final_loss : 0.5235411524772644
+INFO:root:-----------Step 800:-------------
+INFO:root: Standard_loss=Final_loss : 0.4560191035270691
+INFO:root:-----------Step 900:-------------
+INFO:root: Standard_loss=Final_loss : 0.47481822967529297
+INFO:root:-----------Step 1000:-------------
+INFO:root: Standard_loss=Final_loss : 0.25343412160873413
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  90.41% 79.43% 29.23% 73.02% 55.08% 63.40% 86.43% 74.37% 77.73% 21.18% 63.18% 31.97% 67.15% 63.95% 70.12% 76.17% 31.97% 63.96% 40.29% 78.43%
+INFO:root: class acc :  94.01% 86.72% 72.95% 82.00% 68.04% 74.19% 96.74% 91.06% 90.91% 34.37% 77.43% 33.42% 81.58% 89.83% 81.14% 90.83% 75.23% 72.94% 57.69% 90.08%
+INFO:root: mean pix acc : 90.46%
+INFO:root: mIoU : 61.87%
+INFO:root: mean_class_acc : 77.06%
+INFO:root: mIoU_nobackground : 60.37%
+INFO:root: mean_pixel_acc_no_background : 80.80%
+INFO:root: Validation_loss : 0.3155086934566498
+INFO:root: accuracy : 90.46%
+INFO:root: Percentage of pixels not background : 28.34%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-1000
+INFO:root:-----------Step 1100:-------------
+INFO:root: Standard_loss=Final_loss : 0.44327351450920105
+INFO:root:-----------Step 1200:-------------
+INFO:root: Standard_loss=Final_loss : 0.2851332128047943
+INFO:root:-----------Step 1300:-------------
+INFO:root: Standard_loss=Final_loss : 0.28868716955184937
+INFO:root:-----------Step 1400:-------------
+INFO:root: Standard_loss=Final_loss : 0.2686809301376343
+INFO:root:-----------Step 1500:-------------
+INFO:root: Standard_loss=Final_loss : 0.1021270826458931
+INFO:root:-----------Step 1600:-------------
+INFO:root: Standard_loss=Final_loss : 0.43537160754203796
+INFO:root:-----------Step 1700:-------------
+INFO:root: Standard_loss=Final_loss : 0.5071386098861694
+INFO:root:-----------Step 1800:-------------
+INFO:root: Standard_loss=Final_loss : 0.1655452698469162
+INFO:root:-----------Step 1900:-------------
+INFO:root: Standard_loss=Final_loss : 0.3602310121059418
+INFO:root:-----------Step 2000:-------------
+INFO:root: Standard_loss=Final_loss : 0.2759738266468048
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  91.99% 82.10% 32.23% 78.91% 59.81% 65.97% 89.81% 71.13% 82.15% 27.24% 65.57% 53.69% 69.42% 68.00% 64.45% 77.55% 47.31% 69.31% 35.19% 80.13%
+INFO:root: class acc :  96.92% 90.91% 67.21% 85.94% 77.89% 72.69% 94.79% 92.67% 85.16% 40.87% 71.94% 62.20% 91.44% 72.59% 69.41% 83.60% 58.56% 88.62% 38.70% 84.59%
+INFO:root: mean pix acc : 92.04%
+INFO:root: mIoU : 65.60%
+INFO:root: mean_class_acc : 76.34%
+INFO:root: mIoU_nobackground : 64.21%
+INFO:root: mean_pixel_acc_no_background : 78.78%
+INFO:root: Validation_loss : 0.2548311650753021
+INFO:root: accuracy : 92.04%
+INFO:root: Percentage of pixels not background : 25.21%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-2000
+INFO:root:-----------Step 2100:-------------
+INFO:root: Standard_loss=Final_loss : 0.09664612263441086
+INFO:root:-----------Step 2200:-------------
+INFO:root: Standard_loss=Final_loss : 0.16425110399723053
+INFO:root:-----------Step 2300:-------------
+INFO:root: Standard_loss=Final_loss : 0.23294603824615479
+INFO:root:-----------Step 2400:-------------
+INFO:root: Standard_loss=Final_loss : 0.42027685046195984
+INFO:root:-----------Step 2500:-------------
+INFO:root: Standard_loss=Final_loss : 0.5126674771308899
+INFO:root:-----------Step 2600:-------------
+INFO:root: Standard_loss=Final_loss : 0.7877563834190369
+INFO:root:-----------Step 2700:-------------
+INFO:root: Standard_loss=Final_loss : 0.19936291873455048
+INFO:root:-----------Step 2800:-------------
+INFO:root: Standard_loss=Final_loss : 0.5899450182914734
+INFO:root:-----------Step 2900:-------------
+INFO:root: Standard_loss=Final_loss : 0.6178313493728638
+INFO:root:-----------Step 3000:-------------
+INFO:root: Standard_loss=Final_loss : 0.14497849345207214
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  92.02% 80.16% 31.01% 74.74% 59.78% 63.54% 90.42% 73.50% 83.57% 28.20% 65.10% 43.75% 70.93% 70.71% 68.76% 77.45% 48.54% 62.73% 29.45% 83.60%
+INFO:root: class acc :  95.39% 93.87% 68.53% 94.25% 83.82% 74.61% 96.17% 93.65% 93.10% 59.31% 74.32% 46.80% 87.45% 85.58% 85.46% 91.60% 58.92% 65.22% 31.07% 91.06%
+INFO:root: mean pix acc : 91.79%
+INFO:root: mIoU : 64.90%
+INFO:root: mean_class_acc : 78.51%
+INFO:root: mIoU_nobackground : 63.47%
+INFO:root: mean_pixel_acc_no_background : 82.01%
+INFO:root: Validation_loss : 0.2592877447605133
+INFO:root: accuracy : 91.79%
+INFO:root: Percentage of pixels not background : 27.57%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-3000
+INFO:root:-----------Step 3100:-------------
+INFO:root: Standard_loss=Final_loss : 0.18831101059913635
+INFO:root:-----------Step 3200:-------------
+INFO:root: Standard_loss=Final_loss : 0.32744506001472473
+INFO:root:-----------Step 3300:-------------
+INFO:root: Standard_loss=Final_loss : 0.4122566878795624
+INFO:root:-----------Step 3400:-------------
+INFO:root: Standard_loss=Final_loss : 0.5302924513816833
+INFO:root:-----------Step 3500:-------------
+INFO:root: Standard_loss=Final_loss : 0.4937428832054138
+INFO:root:-----------Step 3600:-------------
+INFO:root: Standard_loss=Final_loss : 0.2342185229063034
+INFO:root:-----------Step 3700:-------------
+INFO:root: Standard_loss=Final_loss : 0.4509810209274292
+INFO:root:-----------Step 3800:-------------
+INFO:root: Standard_loss=Final_loss : 0.2559342682361603
+INFO:root:-----------Step 3900:-------------
+INFO:root: Standard_loss=Final_loss : 0.07731587439775467
+INFO:root:-----------Step 4000:-------------
+INFO:root: Standard_loss=Final_loss : 0.35848259925842285
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  92.58% 83.45% 33.92% 82.64% 58.92% 71.54% 88.69% 77.50% 85.02% 27.93% 73.78% 52.79% 76.38% 73.28% 74.32% 79.67% 41.74% 75.82% 47.56% 81.23%
+INFO:root: class acc :  95.78% 95.24% 84.32% 87.35% 72.30% 83.19% 94.21% 92.36% 91.66% 40.15% 80.72% 71.99% 88.96% 85.94% 83.51% 91.57% 46.73% 85.36% 64.67% 86.29%
+INFO:root: mean pix acc : 92.73%
+INFO:root: mIoU : 68.94%
+INFO:root: mean_class_acc : 81.11%
+INFO:root: mIoU_nobackground : 67.69%
+INFO:root: mean_pixel_acc_no_background : 84.44%
+INFO:root: Validation_loss : 0.2280336320400238
+INFO:root: accuracy : 92.73%
+INFO:root: Percentage of pixels not background : 27.43%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-4000
+INFO:root:-----------Step 4100:-------------
+INFO:root: Standard_loss=Final_loss : 0.22822833061218262
+INFO:root:-----------Step 4200:-------------
+INFO:root: Standard_loss=Final_loss : 0.11039026826620102
+INFO:root:-----------Step 4300:-------------
+INFO:root: Standard_loss=Final_loss : 0.46013426780700684
+INFO:root:-----------Step 4400:-------------
+INFO:root: Standard_loss=Final_loss : 0.2035728096961975
+INFO:root:-----------Step 4500:-------------
+INFO:root: Standard_loss=Final_loss : 0.49591925740242004
+INFO:root:-----------Step 4600:-------------
+INFO:root: Standard_loss=Final_loss : 0.18505986034870148
+INFO:root:-----------Step 4700:-------------
+INFO:root: Standard_loss=Final_loss : 0.1617506593465805
+INFO:root:-----------Step 4800:-------------
+INFO:root: Standard_loss=Final_loss : 0.24582597613334656
+INFO:root:-----------Step 4900:-------------
+INFO:root: Standard_loss=Final_loss : 0.2442110925912857
+INFO:root:-----------Step 5000:-------------
+INFO:root: Standard_loss=Final_loss : 0.3832341432571411
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  92.72% 81.76% 33.58% 82.49% 59.98% 70.77% 88.99% 79.98% 85.16% 29.91% 72.90% 50.45% 74.72% 72.59% 73.42% 81.61% 51.25% 77.74% 42.67% 80.58%
+INFO:root: class acc :  96.75% 95.00% 66.93% 86.85% 79.86% 77.35% 91.44% 92.02% 94.84% 45.41% 79.23% 53.46% 81.53% 91.23% 92.20% 88.60% 62.90% 84.19% 49.07% 91.98%
+INFO:root: mean pix acc : 92.98%
+INFO:root: mIoU : 69.16%
+INFO:root: mean_class_acc : 80.04%
+INFO:root: mIoU_nobackground : 67.92%
+INFO:root: mean_pixel_acc_no_background : 82.72%
+INFO:root: Validation_loss : 0.21408961713314056
+INFO:root: accuracy : 92.98%
+INFO:root: Percentage of pixels not background : 26.07%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-5000
+INFO:root:-----------Step 5100:-------------
+INFO:root: Standard_loss=Final_loss : 0.4020904004573822
+INFO:root:-----------Step 5200:-------------
+INFO:root: Standard_loss=Final_loss : 0.09920265525579453
+INFO:root:-----------Step 5300:-------------
+INFO:root: Standard_loss=Final_loss : 0.4635365307331085
+INFO:root:-----------Step 5400:-------------
+INFO:root: Standard_loss=Final_loss : 0.33570659160614014
+INFO:root:-----------Step 5500:-------------
+INFO:root: Standard_loss=Final_loss : 0.314807653427124
+INFO:root:-----------Step 5600:-------------
+INFO:root: Standard_loss=Final_loss : 0.11066187173128128
+INFO:root:-----------Step 5700:-------------
+INFO:root: Standard_loss=Final_loss : 0.17788122594356537
+INFO:root:-----------Step 5800:-------------
+INFO:root: Standard_loss=Final_loss : 0.30319464206695557
+INFO:root:-----------Step 5900:-------------
+INFO:root: Standard_loss=Final_loss : 0.1658012717962265
+INFO:root:-----------Step 6000:-------------
+INFO:root: Standard_loss=Final_loss : 0.19183160364627838
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  92.64% 84.63% 35.13% 82.44% 60.09% 71.54% 91.51% 78.88% 86.47% 31.78% 69.03% 49.11% 73.24% 74.32% 74.82% 81.55% 48.99% 75.64% 41.59% 82.61%
+INFO:root: class acc :  96.60% 90.19% 75.13% 88.56% 88.11% 79.76% 96.84% 92.48% 91.27% 53.37% 74.11% 52.22% 91.58% 88.76% 84.76% 87.17% 67.03% 78.58% 46.89% 91.25%
+INFO:root: mean pix acc : 92.90%
+INFO:root: mIoU : 69.30%
+INFO:root: mean_class_acc : 80.73%
+INFO:root: mIoU_nobackground : 68.07%
+INFO:root: mean_pixel_acc_no_background : 82.85%
+INFO:root: Validation_loss : 0.2173100858926773
+INFO:root: accuracy : 92.90%
+INFO:root: Percentage of pixels not background : 26.24%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-6000
+INFO:root:-----------Step 6100:-------------
+INFO:root: Standard_loss=Final_loss : 0.6516218185424805
+INFO:root:-----------Step 6200:-------------
+INFO:root: Standard_loss=Final_loss : 0.19218815863132477
+INFO:root:-----------Step 6300:-------------
+INFO:root: Standard_loss=Final_loss : 0.21526996791362762
+INFO:root:-----------Step 6400:-------------
+INFO:root: Standard_loss=Final_loss : 0.23861585557460785
+INFO:root:-----------Step 6500:-------------
+INFO:root: Standard_loss=Final_loss : 0.2716667950153351
+INFO:root:-----------Step 6600:-------------
+INFO:root: Standard_loss=Final_loss : 0.2687339186668396
+INFO:root:-----------Step 6700:-------------
+INFO:root: Standard_loss=Final_loss : 0.2955116033554077
+INFO:root:-----------Step 6800:-------------
+INFO:root: Standard_loss=Final_loss : 0.20369768142700195
+INFO:root:-----------Step 6900:-------------
+INFO:root: Standard_loss=Final_loss : 0.25930219888687134
+INFO:root:-----------Step 7000:-------------
+INFO:root: Standard_loss=Final_loss : 0.2811107337474823
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  92.90% 83.49% 35.64% 82.84% 59.28% 75.41% 91.67% 82.20% 85.80% 31.20% 70.73% 57.30% 77.65% 74.61% 76.06% 81.13% 51.05% 76.92% 50.71% 84.24%
+INFO:root: class acc :  96.27% 93.28% 83.19% 91.53% 77.70% 83.93% 94.62% 90.27% 93.20% 47.61% 76.13% 64.99% 87.49% 86.32% 84.56% 90.86% 66.23% 85.32% 64.81% 93.76%
+INFO:root: mean pix acc : 93.25%
+INFO:root: mIoU : 71.04%
+INFO:root: mean_class_acc : 82.60%
+INFO:root: mIoU_nobackground : 69.89%
+INFO:root: mean_pixel_acc_no_background : 85.05%
+INFO:root: Validation_loss : 0.20380595326423645
+INFO:root: accuracy : 93.25%
+INFO:root: Percentage of pixels not background : 26.95%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-7000
+INFO:root:-----------Step 7100:-------------
+INFO:root: Standard_loss=Final_loss : 0.08805295825004578
+INFO:root:-----------Step 7200:-------------
+INFO:root: Standard_loss=Final_loss : 0.18633738160133362
+INFO:root:-----------Step 7300:-------------
+INFO:root: Standard_loss=Final_loss : 0.27744975686073303
+INFO:root:-----------Step 7400:-------------
+INFO:root: Standard_loss=Final_loss : 0.3321376144886017
+INFO:root:-----------Step 7500:-------------
+INFO:root: Standard_loss=Final_loss : 0.30612680315971375
+INFO:root:-----------Step 7600:-------------
+INFO:root: Standard_loss=Final_loss : 0.2751467227935791
+INFO:root:-----------Step 7700:-------------
+INFO:root: Standard_loss=Final_loss : 0.09189525991678238
+INFO:root:-----------Step 7800:-------------
+INFO:root: Standard_loss=Final_loss : 0.07289371639490128
+INFO:root:-----------Step 7900:-------------
+INFO:root: Standard_loss=Final_loss : 0.1797606199979782
+INFO:root:-----------Step 8000:-------------
+INFO:root: Standard_loss=Final_loss : 0.33857911825180054
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  92.45% 84.64% 34.56% 70.07% 62.02% 74.07% 92.16% 81.03% 86.91% 28.83% 72.48% 43.39% 79.33% 74.62% 75.07% 81.69% 50.73% 76.56% 30.61% 84.59%
+INFO:root: class acc :  97.13% 92.38% 68.45% 95.54% 82.34% 83.16% 94.85% 91.47% 94.04% 38.02% 76.38% 45.57% 85.34% 92.01% 84.79% 88.05% 66.26% 81.74% 32.04% 92.64%
+INFO:root: mean pix acc : 92.98%
+INFO:root: mIoU : 68.79%
+INFO:root: mean_class_acc : 79.11%
+INFO:root: mIoU_nobackground : 67.54%
+INFO:root: mean_pixel_acc_no_background : 81.66%
+INFO:root: Validation_loss : 0.21634091436862946
+INFO:root: accuracy : 92.98%
+INFO:root: Percentage of pixels not background : 25.27%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-8000
+INFO:root:-----------Step 8100:-------------
+INFO:root: Standard_loss=Final_loss : 0.3552655279636383
+INFO:root:-----------Step 8200:-------------
+INFO:root: Standard_loss=Final_loss : 0.0984949916601181
+INFO:root:-----------Step 8300:-------------
+INFO:root: Standard_loss=Final_loss : 1.159067988395691
+INFO:root:-----------Step 8400:-------------
+INFO:root: Standard_loss=Final_loss : 0.21246853470802307
+INFO:root:-----------Step 8500:-------------
+INFO:root: Standard_loss=Final_loss : 0.08965644985437393
+INFO:root:-----------Step 8600:-------------
+INFO:root: Standard_loss=Final_loss : 0.16814498603343964
+INFO:root:-----------Step 8700:-------------
+INFO:root: Standard_loss=Final_loss : 0.7839813828468323
+INFO:root:-----------Step 8800:-------------
+INFO:root: Standard_loss=Final_loss : 0.38893526792526245
+INFO:root:-----------Step 8900:-------------
+INFO:root: Standard_loss=Final_loss : 0.2554855942726135
+INFO:root:-----------Step 9000:-------------
+INFO:root: Standard_loss=Final_loss : 0.46413329243659973
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  92.53% 85.64% 35.44% 83.99% 63.25% 75.27% 90.02% 67.25% 87.27% 29.87% 71.50% 52.08% 78.60% 76.40% 70.40% 82.30% 50.91% 75.36% 42.98% 84.85%
+INFO:root: class acc :  96.97% 92.57% 71.84% 88.39% 85.36% 88.97% 94.61% 95.10% 90.99% 38.89% 77.46% 56.28% 85.11% 85.28% 79.53% 88.04% 64.94% 77.13% 49.62% 91.78%
+INFO:root: mean pix acc : 93.04%
+INFO:root: mIoU : 69.79%
+INFO:root: mean_class_acc : 79.94%
+INFO:root: mIoU_nobackground : 68.60%
+INFO:root: mean_pixel_acc_no_background : 82.35%
+INFO:root: Validation_loss : 0.21380378305912018
+INFO:root: accuracy : 93.04%
+INFO:root: Percentage of pixels not background : 25.58%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-9000
+INFO:root:-----------Step 9100:-------------
+INFO:root: Standard_loss=Final_loss : 0.11740458011627197
+INFO:root:-----------Step 9200:-------------
+INFO:root: Standard_loss=Final_loss : 0.22645150125026703
+INFO:root:-----------Step 9300:-------------
+INFO:root: Standard_loss=Final_loss : 0.08896010369062424
+INFO:root:-----------Step 9400:-------------
+INFO:root: Standard_loss=Final_loss : 0.2641827464103699
+INFO:root:-----------Step 9500:-------------
+INFO:root: Standard_loss=Final_loss : 0.08598247915506363
+INFO:root:-----------Step 9600:-------------
+INFO:root: Standard_loss=Final_loss : 0.1746472865343094
+INFO:root:-----------Step 9700:-------------
+INFO:root: Standard_loss=Final_loss : 0.2782370150089264
+INFO:root:-----------Step 9800:-------------
+INFO:root: Standard_loss=Final_loss : 0.19024550914764404
+INFO:root:-----------Step 9900:-------------
+INFO:root: Standard_loss=Final_loss : 0.3778380751609802
+INFO:root:-----------Step 10000:-------------
+INFO:root: Standard_loss=Final_loss : 0.1772984117269516
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  93.24% 84.65% 35.86% 82.59% 63.97% 77.18% 89.95% 84.23% 87.62% 30.42% 78.89% 54.15% 79.08% 80.73% 76.22% 82.24% 50.87% 78.62% 50.42% 81.61%
+INFO:root: class acc :  96.69% 94.98% 73.81% 86.66% 81.08% 87.30% 96.72% 91.00% 95.42% 42.02% 89.07% 58.54% 89.06% 89.96% 91.05% 91.79% 65.42% 86.18% 59.51% 85.04%
+INFO:root: mean pix acc : 93.67%
+INFO:root: mIoU : 72.13%
+INFO:root: mean_class_acc : 82.56%
+INFO:root: mIoU_nobackground : 71.02%
+INFO:root: mean_pixel_acc_no_background : 85.45%
+INFO:root: Validation_loss : 0.1950465440750122
+INFO:root: accuracy : 93.67%
+INFO:root: Percentage of pixels not background : 26.59%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-10000
+INFO:root:-----------Step 10100:-------------
+INFO:root: Standard_loss=Final_loss : 0.09689179062843323
+INFO:root:-----------Step 10200:-------------
+INFO:root: Standard_loss=Final_loss : 0.057391587644815445
+INFO:root:-----------Step 10300:-------------
+INFO:root: Standard_loss=Final_loss : 0.4710163176059723
+INFO:root:-----------Step 10400:-------------
+INFO:root: Standard_loss=Final_loss : 0.0507710762321949
+INFO:root:-----------Step 10500:-------------
+INFO:root: Standard_loss=Final_loss : 0.05895692855119705
+INFO:root:-----------Step 10600:-------------
+INFO:root: Standard_loss=Final_loss : 0.06808445602655411
+INFO:root:-----------Step 10700:-------------
+INFO:root: Standard_loss=Final_loss : 0.6246229410171509
+INFO:root:-----------Step 10800:-------------
+INFO:root: Standard_loss=Final_loss : 0.5247927904129028
+INFO:root:-----------Step 10900:-------------
+INFO:root: Standard_loss=Final_loss : 0.20624373853206635
+INFO:root:-----------Step 11000:-------------
+INFO:root: Standard_loss=Final_loss : 0.18388690054416656
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  93.04% 83.50% 35.58% 86.35% 60.31% 68.74% 92.15% 83.41% 87.24% 31.57% 78.12% 49.13% 80.12% 80.28% 78.14% 82.50% 51.57% 78.02% 46.41% 84.37%
+INFO:root: class acc :  96.91% 93.83% 76.56% 92.36% 74.67% 75.32% 97.06% 90.44% 92.78% 55.58% 91.68% 51.84% 86.12% 85.63% 88.50% 88.69% 63.90% 83.59% 54.13% 94.03%
+INFO:root: mean pix acc : 93.48%
+INFO:root: mIoU : 71.53%
+INFO:root: mean_class_acc : 81.68%
+INFO:root: mIoU_nobackground : 70.39%
+INFO:root: mean_pixel_acc_no_background : 84.16%
+INFO:root: Validation_loss : 0.20253132283687592
+INFO:root: accuracy : 93.48%
+INFO:root: Percentage of pixels not background : 26.10%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-11000
+INFO:root:-----------Step 11100:-------------
+INFO:root: Standard_loss=Final_loss : 0.2914411723613739
+INFO:root:-----------Step 11200:-------------
+INFO:root: Standard_loss=Final_loss : 0.30245283246040344
+INFO:root:-----------Step 11300:-------------
+INFO:root: Standard_loss=Final_loss : 0.3760511577129364
+INFO:root:-----------Step 11400:-------------
+INFO:root: Standard_loss=Final_loss : 0.21182268857955933
+INFO:root:-----------Step 11500:-------------
+INFO:root: Standard_loss=Final_loss : 0.35230064392089844
+INFO:root:-----------Step 11600:-------------
+INFO:root: Standard_loss=Final_loss : 0.12918101251125336
+INFO:root:-----------Step 11700:-------------
+INFO:root: Standard_loss=Final_loss : 0.16897247731685638
+INFO:root:-----------Step 11800:-------------
+INFO:root: Standard_loss=Final_loss : 0.22979527711868286
+INFO:root:-----------Step 11900:-------------
+INFO:root: Standard_loss=Final_loss : 0.13882137835025787
+INFO:root:-----------Step 12000:-------------
+INFO:root: Standard_loss=Final_loss : 0.37091442942619324
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  93.07% 84.32% 34.75% 83.76% 62.49% 75.65% 92.52% 80.79% 86.61% 33.18% 75.99% 57.20% 80.45% 79.63% 75.96% 82.63% 50.58% 78.73% 50.34% 84.49%
+INFO:root: class acc :  96.44% 95.35% 89.49% 94.30% 86.43% 88.99% 96.90% 92.53% 90.15% 48.73% 82.53% 62.24% 91.40% 90.94% 84.94% 89.26% 66.12% 82.19% 60.47% 92.68%
+INFO:root: mean pix acc : 93.54%
+INFO:root: mIoU : 72.16%
+INFO:root: mean_class_acc : 84.10%
+INFO:root: mIoU_nobackground : 71.06%
+INFO:root: mean_pixel_acc_no_background : 85.66%
+INFO:root: Validation_loss : 0.2003658264875412
+INFO:root: accuracy : 93.54%
+INFO:root: Percentage of pixels not background : 26.83%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-12000
+INFO:root:-----------Step 12100:-------------
+INFO:root: Standard_loss=Final_loss : 0.1228717789053917
+INFO:root:-----------Step 12200:-------------
+INFO:root: Standard_loss=Final_loss : 0.3947676718235016
+INFO:root:-----------Step 12300:-------------
+INFO:root: Standard_loss=Final_loss : 0.3101322054862976
+INFO:root:-----------Step 12400:-------------
+INFO:root: Standard_loss=Final_loss : 0.1107388585805893
+INFO:root:-----------Step 12500:-------------
+INFO:root: Standard_loss=Final_loss : 0.28447097539901733
+INFO:root:-----------Step 12600:-------------
+INFO:root: Standard_loss=Final_loss : 0.14365030825138092
+INFO:root:-----------Step 12700:-------------
+INFO:root: Standard_loss=Final_loss : 0.2513391673564911
+INFO:root:-----------Step 12800:-------------
+INFO:root: Standard_loss=Final_loss : 0.4239061176776886
+INFO:root:-----------Step 12900:-------------
+INFO:root: Standard_loss=Final_loss : 0.12648585438728333
+INFO:root:-----------Step 13000:-------------
+INFO:root: Standard_loss=Final_loss : 0.24660541117191315
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  92.89% 85.43% 36.00% 86.12% 60.50% 69.90% 92.03% 83.79% 88.06% 31.43% 78.20% 42.61% 80.00% 78.46% 77.88% 82.80% 51.56% 79.62% 46.73% 82.01%
+INFO:root: class acc :  97.07% 93.99% 79.17% 92.41% 87.54% 74.26% 95.06% 91.17% 92.98% 41.93% 86.29% 43.93% 87.69% 93.00% 89.69% 89.81% 67.31% 84.80% 53.72% 87.43%
+INFO:root: mean pix acc : 93.48%
+INFO:root: mIoU : 71.30%
+INFO:root: mean_class_acc : 81.46%
+INFO:root: mIoU_nobackground : 70.16%
+INFO:root: mean_pixel_acc_no_background : 83.70%
+INFO:root: Validation_loss : 0.20073296129703522
+INFO:root: accuracy : 93.48%
+INFO:root: Percentage of pixels not background : 25.72%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-13000
+INFO:root:-----------Step 13100:-------------
+INFO:root: Standard_loss=Final_loss : 0.20664390921592712
+INFO:root:-----------Step 13200:-------------
+INFO:root: Standard_loss=Final_loss : 0.4579027593135834
+INFO:root:-----------Step 13300:-------------
+INFO:root: Standard_loss=Final_loss : 0.42218300700187683
+INFO:root:-----------Step 13400:-------------
+INFO:root: Standard_loss=Final_loss : 0.16891182959079742
+INFO:root:-----------Step 13500:-------------
+INFO:root: Standard_loss=Final_loss : 0.12546280026435852
+INFO:root:-----------Step 13600:-------------
+INFO:root: Standard_loss=Final_loss : 0.19285236299037933
+INFO:root:-----------Step 13700:-------------
+INFO:root: Standard_loss=Final_loss : 0.7633983492851257
+INFO:root:-----------Step 13800:-------------
+INFO:root: Standard_loss=Final_loss : 0.2805039584636688
+INFO:root:-----------Step 13900:-------------
+INFO:root: Standard_loss=Final_loss : 0.23495692014694214
+INFO:root:-----------Step 14000:-------------
+INFO:root: Standard_loss=Final_loss : 0.36920830607414246
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  93.15% 85.88% 36.83% 84.67% 62.83% 78.08% 92.90% 84.31% 88.27% 30.20% 77.28% 57.76% 79.97% 78.32% 77.44% 82.35% 46.70% 78.07% 48.68% 85.19%
+INFO:root: class acc :  96.50% 93.23% 80.61% 93.44% 83.50% 89.44% 96.44% 90.74% 94.85% 53.61% 84.62% 74.41% 86.86% 85.25% 87.34% 88.25% 64.04% 83.20% 58.23% 90.42%
+INFO:root: mean pix acc : 93.55%
+INFO:root: mIoU : 72.44%
+INFO:root: mean_class_acc : 83.75%
+INFO:root: mIoU_nobackground : 71.35%
+INFO:root: mean_pixel_acc_no_background : 85.52%
+INFO:root: Validation_loss : 0.19724145531654358
+INFO:root: accuracy : 93.55%
+INFO:root: Percentage of pixels not background : 26.80%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-14000
+INFO:root:-----------Step 14100:-------------
+INFO:root: Standard_loss=Final_loss : 0.5033202171325684
+INFO:root:-----------Step 14200:-------------
+INFO:root: Standard_loss=Final_loss : 0.2904491722583771
+INFO:root:-----------Step 14300:-------------
+INFO:root: Standard_loss=Final_loss : 0.16920064389705658
+INFO:root:-----------Step 14400:-------------
+INFO:root: Standard_loss=Final_loss : 0.1718181073665619
+INFO:root:-----------Step 14500:-------------
+INFO:root: Standard_loss=Final_loss : 0.32094427943229675
+INFO:root:-----------Step 14600:-------------
+INFO:root: Standard_loss=Final_loss : 0.2737438678741455
+INFO:root:-----------Step 14700:-------------
+INFO:root: Standard_loss=Final_loss : 0.16279904544353485
+INFO:root:-----------Step 14800:-------------
+INFO:root: Standard_loss=Final_loss : 0.4581180512905121
+INFO:root:-----------Step 14900:-------------
+INFO:root: Standard_loss=Final_loss : 0.1784466952085495
+INFO:root:-----------Step 15000:-------------
+INFO:root: Standard_loss=Final_loss : 0.14876562356948853
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  93.28% 81.36% 36.41% 86.10% 61.61% 76.70% 92.84% 82.69% 88.02% 33.06% 79.68% 57.51% 80.69% 81.06% 76.85% 82.73% 51.29% 80.64% 46.88% 83.95%
+INFO:root: class acc :  96.49% 96.46% 78.41% 93.15% 85.44% 85.61% 95.85% 91.92% 95.53% 55.60% 91.45% 63.01% 86.30% 90.07% 87.24% 90.50% 64.00% 87.19% 53.97% 93.13%
+INFO:root: mean pix acc : 93.71%
+INFO:root: mIoU : 72.67%
+INFO:root: mean_class_acc : 84.07%
+INFO:root: mIoU_nobackground : 71.58%
+INFO:root: mean_pixel_acc_no_background : 86.15%
+INFO:root: Validation_loss : 0.1948602795600891
+INFO:root: accuracy : 93.71%
+INFO:root: Percentage of pixels not background : 26.93%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-15000
+INFO:root:-----------Step 15100:-------------
+INFO:root: Standard_loss=Final_loss : 0.12356088310480118
+INFO:root:-----------Step 15200:-------------
+INFO:root: Standard_loss=Final_loss : 0.0815092921257019
+INFO:root:-----------Step 15300:-------------
+INFO:root: Standard_loss=Final_loss : 0.14115017652511597
+INFO:root:-----------Step 15400:-------------
+INFO:root: Standard_loss=Final_loss : 0.2660977840423584
+INFO:root:-----------Step 15500:-------------
+INFO:root: Standard_loss=Final_loss : 0.16187800467014313
+INFO:root:-----------Step 15600:-------------
+INFO:root: Standard_loss=Final_loss : 0.4971846640110016
+INFO:root:-----------Step 15700:-------------
+INFO:root: Standard_loss=Final_loss : 0.07665379345417023
+INFO:root:-----------Step 15800:-------------
+INFO:root: Standard_loss=Final_loss : 0.17362156510353088
+INFO:root:-----------Step 15900:-------------
+INFO:root: Standard_loss=Final_loss : 0.1998174637556076
+INFO:root:-----------Step 16000:-------------
+INFO:root: Standard_loss=Final_loss : 0.8745519518852234
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  92.94% 78.78% 36.69% 85.72% 59.16% 76.10% 92.54% 82.56% 88.31% 33.05% 78.87% 40.02% 80.38% 79.39% 77.59% 82.87% 50.35% 80.61% 48.90% 85.45%
+INFO:root: class acc :  96.31% 97.27% 79.29% 93.32% 90.11% 84.29% 95.91% 92.30% 95.90% 53.62% 88.57% 40.93% 86.80% 91.36% 88.51% 91.24% 67.71% 84.52% 57.83% 93.61%
+INFO:root: mean pix acc : 93.44%
+INFO:root: mIoU : 71.51%
+INFO:root: mean_class_acc : 83.47%
+INFO:root: mIoU_nobackground : 70.39%
+INFO:root: mean_pixel_acc_no_background : 85.62%
+INFO:root: Validation_loss : 0.20226266980171204
+INFO:root: accuracy : 93.44%
+INFO:root: Percentage of pixels not background : 26.92%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-16000
+INFO:root:-----------Step 16100:-------------
+INFO:root: Standard_loss=Final_loss : 0.20889641344547272
+INFO:root:-----------Step 16200:-------------
+INFO:root: Standard_loss=Final_loss : 0.12368063628673553
+INFO:root:-----------Step 16300:-------------
+INFO:root: Standard_loss=Final_loss : 0.10948490351438522
+INFO:root:-----------Step 16400:-------------
+INFO:root: Standard_loss=Final_loss : 0.12053579837083817
+INFO:root:-----------Step 16500:-------------
+INFO:root: Standard_loss=Final_loss : 0.5756590366363525
+INFO:root:-----------Step 16600:-------------
+INFO:root: Standard_loss=Final_loss : 0.11712194979190826
+INFO:root:-----------Step 16700:-------------
+INFO:root: Standard_loss=Final_loss : 0.24370279908180237
+INFO:root:-----------Step 16800:-------------
+INFO:root: Standard_loss=Final_loss : 0.3365411162376404
+INFO:root:-----------Step 16900:-------------
+INFO:root: Standard_loss=Final_loss : 0.4165709316730499
+INFO:root:-----------Step 17000:-------------
+INFO:root: Standard_loss=Final_loss : 0.40890932083129883
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  93.34% 85.57% 37.22% 85.98% 61.63% 77.56% 92.96% 82.53% 88.80% 32.61% 79.95% 59.33% 81.56% 81.79% 77.28% 83.15% 50.57% 81.00% 50.12% 84.57%
+INFO:root: class acc :  96.27% 94.21% 85.38% 92.80% 87.26% 89.61% 97.29% 92.72% 95.62% 56.71% 88.73% 67.81% 88.66% 89.87% 86.67% 90.26% 66.85% 87.13% 60.71% 91.55%
+INFO:root: mean pix acc : 93.78%
+INFO:root: mIoU : 73.38%
+INFO:root: mean_class_acc : 85.31%
+INFO:root: mIoU_nobackground : 72.33%
+INFO:root: mean_pixel_acc_no_background : 87.00%
+INFO:root: Validation_loss : 0.19236965477466583
+INFO:root: accuracy : 93.78%
+INFO:root: Percentage of pixels not background : 27.30%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-17000
+INFO:root:-----------Step 17100:-------------
+INFO:root: Standard_loss=Final_loss : 0.24060674011707306
+INFO:root:-----------Step 17200:-------------
+INFO:root: Standard_loss=Final_loss : 0.6554440259933472
+INFO:root:-----------Step 17300:-------------
+INFO:root: Standard_loss=Final_loss : 0.18039217591285706
+INFO:root:-----------Step 17400:-------------
+INFO:root: Standard_loss=Final_loss : 0.09543169289827347
+INFO:root:-----------Step 17500:-------------
+INFO:root: Standard_loss=Final_loss : 0.4884388744831085
+INFO:root:-----------Step 17600:-------------
+INFO:root: Standard_loss=Final_loss : 0.03289550170302391
+INFO:root:-----------Step 17700:-------------
+INFO:root: Standard_loss=Final_loss : 0.11674749106168747
+INFO:root:-----------Step 17800:-------------
+INFO:root: Standard_loss=Final_loss : 0.1235361397266388
+INFO:root:-----------Step 17900:-------------
+INFO:root: Standard_loss=Final_loss : 0.25960424542427063
+INFO:root:-----------Step 18000:-------------
+INFO:root: Standard_loss=Final_loss : 0.185703307390213
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  93.19% 86.18% 35.67% 85.34% 62.57% 74.64% 93.07% 82.97% 89.14% 31.44% 79.44% 48.67% 81.88% 80.42% 76.07% 83.00% 50.59% 81.40% 44.49% 84.97%
+INFO:root: class acc :  97.07% 93.78% 73.15% 93.29% 86.84% 80.02% 96.24% 92.46% 94.83% 45.48% 87.62% 50.82% 91.01% 91.47% 91.24% 89.26% 59.67% 86.31% 49.46% 91.58%
+INFO:root: mean pix acc : 93.75%
+INFO:root: mIoU : 72.26%
+INFO:root: mean_class_acc : 82.08%
+INFO:root: mIoU_nobackground : 71.16%
+INFO:root: mean_pixel_acc_no_background : 84.71%
+INFO:root: Validation_loss : 0.19098132848739624
+INFO:root: accuracy : 93.75%
+INFO:root: Percentage of pixels not background : 25.98%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-18000
+INFO:root:-----------Step 18100:-------------
+INFO:root: Standard_loss=Final_loss : 0.14596229791641235
+INFO:root:-----------Step 18200:-------------
+INFO:root: Standard_loss=Final_loss : 0.14006178081035614
+INFO:root:-----------Step 18300:-------------
+INFO:root: Standard_loss=Final_loss : 0.23532502353191376
+INFO:root:-----------Step 18400:-------------
+INFO:root: Standard_loss=Final_loss : 0.3864046335220337
+INFO:root:-----------Step 18500:-------------
+INFO:root: Standard_loss=Final_loss : 0.16633068025112152
+INFO:root:-----------Step 18600:-------------
+INFO:root: Standard_loss=Final_loss : 0.4342338442802429
+INFO:root:-----------Step 18700:-------------
+INFO:root: Standard_loss=Final_loss : 0.16144616901874542
+INFO:root:-----------Step 18800:-------------
+INFO:root: Standard_loss=Final_loss : 0.22204136848449707
+INFO:root:-----------Step 18900:-------------
+INFO:root: Standard_loss=Final_loss : 0.24740584194660187
+INFO:root:-----------Step 19000:-------------
+INFO:root: Standard_loss=Final_loss : 0.45819565653800964
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  93.43% 85.61% 35.94% 86.08% 62.83% 77.21% 93.36% 83.17% 89.04% 32.55% 79.86% 56.47% 81.96% 80.08% 76.07% 83.34% 51.61% 81.08% 51.36% 84.72%
+INFO:root: class acc :  96.48% 94.40% 75.57% 93.13% 84.90% 86.92% 96.90% 92.69% 94.04% 54.54% 88.91% 62.14% 90.23% 91.34% 90.78% 89.68% 64.75% 84.54% 66.28% 91.39%
+INFO:root: mean pix acc : 93.85%
+INFO:root: mIoU : 73.29%
+INFO:root: mean_class_acc : 84.48%
+INFO:root: mIoU_nobackground : 72.23%
+INFO:root: mean_pixel_acc_no_background : 86.68%
+INFO:root: Validation_loss : 0.1894042044878006
+INFO:root: accuracy : 93.84%
+INFO:root: Percentage of pixels not background : 27.06%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-19000
+INFO:root:-----------Step 19100:-------------
+INFO:root: Standard_loss=Final_loss : 0.15325474739074707
+INFO:root:-----------Step 19200:-------------
+INFO:root: Standard_loss=Final_loss : 0.13440574705600739
+INFO:root:-----------Step 19300:-------------
+INFO:root: Standard_loss=Final_loss : 0.1470024287700653
+INFO:root:-----------Step 19400:-------------
+INFO:root: Standard_loss=Final_loss : 0.1584695279598236
+INFO:root:-----------Step 19500:-------------
+INFO:root: Standard_loss=Final_loss : 0.31922587752342224
+INFO:root:-----------Step 19600:-------------
+INFO:root: Standard_loss=Final_loss : 0.15659064054489136
+INFO:root:-----------Step 19700:-------------
+INFO:root: Standard_loss=Final_loss : 0.5304632782936096
+INFO:root:-----------Step 19800:-------------
+INFO:root: Standard_loss=Final_loss : 0.10988566279411316
+INFO:root:-----------Step 19900:-------------
+INFO:root: Standard_loss=Final_loss : 0.09446380287408829
+INFO:root:-----------Step 20000:-------------
+INFO:root: Final loss: 0.14816734194755554
+INFO:root: The chosen value (1449) exceed number of validation images! Used 1375 instead.
+INFO:root: index :           0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19
+INFO:root: class IoU :  93.38% 85.54% 37.13% 86.20% 62.17% 77.89% 93.39% 83.53% 89.27% 32.63% 80.69% 57.32% 81.48% 81.23% 77.69% 83.00% 51.51% 81.64% 48.21% 84.98%
+INFO:root: class acc :  96.78% 94.63% 82.09% 92.39% 85.58% 88.36% 97.06% 92.18% 94.06% 48.51% 89.20% 63.97% 90.63% 90.43% 90.33% 88.77% 65.50% 86.00% 55.99% 92.58%
+INFO:root: mean pix acc : 93.91%
+INFO:root: mIoU : 73.44%
+INFO:root: mean_class_acc : 84.25%
+INFO:root: mIoU_nobackground : 72.40%
+INFO:root: mean_pixel_acc_no_background : 86.08%
+INFO:root: Validation_loss : 0.18778979778289795
+INFO:root: accuracy : 93.91%
+INFO:root: Percentage of pixels not background : 26.56%
+INFO:root: Percentage of pixels not background (GT) : 26.87%
+INFO:root:Model saved in file: checkpoints/1_to_19/model.ckpt-20000

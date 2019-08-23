@@ -1,0 +1,27 @@
+-----------build encoder: deeplab pre-trained-----------
+after start block: (4, 81, 81, 64)
+after block1: (4, 81, 81, 256)
+after block2: (4, 41, 41, 512)
+after block3: (4, 41, 41, 1024)
+after block4: (4, 41, 41, 2048)
+-----------build decoder-----------
+after aspp block: (4, 41, 41, 21)
+Traceback (most recent call last):
+  File "train_with_distillation_blockencoder.py", line 339, in <module>
+    tf.app.run()
+  File "C:\Users\Umberto\AppData\Local\conda\conda\envs\tensorflow\lib\site-packages\tensorflow\python\platform\app.py", line 125, in run
+    _sys.exit(main(argv))
+  File "train_with_distillation_blockencoder.py", line 335, in main
+    train()
+  File "train_with_distillation_blockencoder.py", line 131, in train
+    train_writer = tf.summary.FileWriter(checkpoints_dir_save, graph)
+  File "C:\Users\Umberto\AppData\Local\conda\conda\envs\tensorflow\lib\site-packages\tensorflow\python\summary\writer\writer.py", line 367, in __init__
+    super(FileWriter, self).__init__(event_writer, graph, graph_def)
+  File "C:\Users\Umberto\AppData\Local\conda\conda\envs\tensorflow\lib\site-packages\tensorflow\python\summary\writer\writer.py", line 87, in __init__
+    if isinstance(graph, ops.Graph) else graph)
+  File "C:\Users\Umberto\AppData\Local\conda\conda\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 3124, in as_graph_def
+    result, _ = self._as_graph_def(from_version, add_shapes)
+  File "C:\Users\Umberto\AppData\Local\conda\conda\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 3082, in _as_graph_def
+    c_api.TF_GraphToGraphDef(self._c_graph, buf)
+KeyboardInterrupt
+^C
