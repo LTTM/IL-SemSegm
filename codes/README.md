@@ -15,9 +15,6 @@ Compare with Table 1 of the paper:
 ```encoderfixed_LD1/``` : the distillation loss LD1 with the encoeder fixed.
 
 
-```encoderfixed_LD2/``` : the distillation loss LD2 with the encoeder fixed.
-
-
 
 NB: to have fair comparison be sure to run the first step only once and then copy/paste those checkpoints into the desired folder inside which you should only run the incremental step. 
 
