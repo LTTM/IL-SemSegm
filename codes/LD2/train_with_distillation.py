@@ -57,7 +57,7 @@ tf.flags.DEFINE_integer('is_save_new_softmax_maps', 0, 'determine whether to sav
 tf.flags.DEFINE_integer('from_new_class', None, 'specifies the starting index [included] of the new classes to the added')
 tf.flags.DEFINE_integer('to_new_class', None, 'specifies the ending index [included] of the new classes to be added')
 tf.flags.DEFINE_string('standard_loss_applied_to', 'all', 'specifies where to apply the standard loss: [all, new, new_old] classes')
-tf.flags.DEFINE_string('distill_loss_applied_to', 'all', 'specifies where to apply the distillation loss: [all, new, old] classes')
+tf.flags.DEFINE_string('distill_loss_applied_to', 'old_bgr', 'specifies where to apply the distillation loss: [all, new, old] classes')
 # NB: the default of the above two parameters must remain 'all', see network_loss the reason why
 tf.flags.DEFINE_integer('is_distillonfeatures', 0, 'determine whether we are distilling on the features [1] or on the softmax output [0]')
 
