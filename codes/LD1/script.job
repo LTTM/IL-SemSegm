@@ -21,8 +21,8 @@ python -u train_with_distillation.py \
 --decay_steps 20000 \
 --start_learning_rate 1e-4 \
 --end_learning_rate 1e-6 \
---training_file ../../../sample_dataset/tfrecords/train_1_19.tfrecords \
---validation_file ../../../sample_dataset/tfrecords/val_1_19.tfrecords \
+--training_file ../../sample_dataset/tfrecords/train_1_19.tfrecords \
+--validation_file ../../sample_dataset/tfrecords/val_1_19.tfrecords \
 --up_to_class 19 \
 --lambda_distillation 0 \
 --is_incremental 0 \
@@ -47,8 +47,8 @@ python -u train_with_distillation.py \
 --start_learning_rate 5e-5 \
 --end_learning_rate 1e-6 \
 --load_model 1_to_19 \
---training_file ../../../sample_dataset/tfrecords/train_20.tfrecords \
---validation_file ../../../sample_dataset/tfrecords/val_1_20.tfrecords \
+--training_file ../../sample_dataset/tfrecords/train_20.tfrecords \
+--validation_file ../../sample_dataset/tfrecords/val_1_20.tfrecords \
 --from_new_class 20 \
 --to_new_class 20 \
 --standard_loss_applied_to all \
@@ -71,8 +71,8 @@ python -u train_with_distillation.py \
 --start_learning_rate 5e-5 \
 --end_learning_rate 1e-6 \
 --load_model 1_to_19 \
---training_file ../../../sample_dataset/tfrecords/train_20.tfrecords \
---validation_file ../../../sample_dataset/tfrecords/val_1_20.tfrecords \
+--training_file ../../sample_dataset/tfrecords/train_20.tfrecords \
+--validation_file ../../sample_dataset/tfrecords/val_1_20.tfrecords \
 --from_new_class 20 \
 --to_new_class 20 \
 --standard_loss_applied_to all \

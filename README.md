@@ -27,7 +27,7 @@ The webpage of the paper is: https://lttm.dei.unipd.it/paper_data/IL/
 
 
 # Training
-I would suggest to start from the folder ```codes/LD1/``` where you can run the simulations for the incremental scenario in which only the last class is added and only the LD1 loss is present.   
+I suggest to start from the folder ```codes/LD1/``` where you can run the simulations for the incremental scenario in which only the last class is added and only the LD1 loss is present.   
 The procedure is discussed in detail at ```codes/LD1/README.txt```.   
 **NB:** for the other folders no README.txt exists since they are straightforward extensions of the code contained in the ```LD1/``` folder
 
