@@ -19,6 +19,8 @@ The PDF of the paper can be found at: https://arxiv.org/abs/1907.13372
 
 The webpage of the paper is: https://lttm.dei.unipd.it/paper_data/IL/
 
+![architecture image](architecture_v6.png)
+
 # Setup
 - Download the pretrained model of the Deeplab-v2 architecture pretrained on MSCOCO from: https://drive.google.com/drive/folders/0B_rootXHuswsZ0E4Mjh1ZU5xZVU and place it inside the folder ```pretrained/```
 - Download the Pascal VOC dataset or your desired dataset and process it with the provided scripts for pre-processing (further info at ```sample_dataset/README.txt```).
