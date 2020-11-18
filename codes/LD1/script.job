@@ -32,7 +32,7 @@ python -u train_with_distillation.py \
 # This call generates the files to be used for the next training procedure.
 python run_generate_old_maps.py \
 --load_model 1_to_19 \ 
---validation_file ../../../sample_dataset/tfrecords/train_20.tfrecords
+--validation_file ../../sample_dataset/tfrecords/train_20.tfrecords
 
 # Second stage of training in which we train the model on the last class for 1*1000 steps without distillation loss
 python -u train_with_distillation.py \
